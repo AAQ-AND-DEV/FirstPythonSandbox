@@ -1,0 +1,14 @@
+class TryExceptPractice(object):
+
+    @staticmethod
+    def party_planner(cookies, people):
+        leftovers = None
+        num_each = None
+        # catch ZeroDivisionError
+        try:
+            num_each = cookies // people
+            leftovers = cookies % people
+        except ZeroDivisionError:
+            print("sorry, but what's a party without a person and a cookie?")
+        return num_each, leftovers
+
